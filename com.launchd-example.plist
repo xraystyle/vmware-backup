@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.launchd-example.vmbackup</string>
+    <key>OnDemand</key>
+    <true/>
+    <key>RunAtLoad</key>
+    <false/>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/ruby</string>
+        <!-- Set the path to the script here. On OS X '/Library/Scripts' is recommended. -->
+		<string>/path/to/script/vmbackup.rb</string>
+	</array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>21</integer>
+        <key>Minute</key>
+        <integer>00</integer>
+    </dict>
+</dict>
+</plist>

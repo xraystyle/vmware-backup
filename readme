@@ -1,0 +1,22 @@
+This is a short script that can be used for automated backup of VMWare virtual machines
+without having to shut them down or quit VMWare first.
+
+Tested on OS X 10.6 - 10.8, in Ruby 1.8.7 and 2.0.0
+
+I don't see why this wouldn't work on other platforms as long as there's no major
+syntax changes for the vmrun command on other platforms or anything.
+
+Usage:
+
+Scroll through the script and edit the paths and variables as appropriate.
+Things that need to be changed are between angle brackets, e.g. <change this>.
+
+Once the appropriate edits have been made to the script for your system you can run 
+the script manually or automate a recurring run with the tool of your choice.
+
+Included here is an example launchd XML .plist to run the script every night at 10 PM on OS X. 
+See the launchd documentation for details on what you can do with launchd, it's a good 
+bit more flexible than cron.
+
+The .plist should go into "/Library/LaunchDaemons". Make sure the script is 775.
+
