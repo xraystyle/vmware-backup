@@ -14,7 +14,7 @@ Things that need to be changed are between angle brackets, e.g. <change this>.
 Once the appropriate edits have been made to the script for your system you can run 
 the script manually or automate a recurring run with the tool of your choice.
 
-Included here is an example launchd XML .plist to run the script every night at 10 PM on OS X. 
+Included here is an example launchd XML .plist to run the script every night at 9 PM on OS X. 
 See the launchd documentation for details on what you can do with launchd, it's a good 
 bit more flexible than cron.
 
