@@ -25,11 +25,13 @@ end
 # Suspend the VMs.
 def suspend_vms
 	
+	@suspend_output = []
+
 	Dir.chdir(@vm_dir)
 
 	@vms.each do |vm|
 		# puts vm
-		 `"/Applications/VMware Fusion.app/Contents/Library/vmrun" suspend '#{vm}' soft`
+		 @suspend_output << `"/Applications//VMware Fusion.app/Contents/Library/vmrun" suspend '#{vm}' soft`
 	end
 
 end
@@ -70,6 +72,7 @@ end
 
 if vms_running?
 	puts "VMs failed to suspend, exiting..."
+	puts "Output of VMRun command:\n #{@suspend_output}"
 	# Tried to suspend twice, something went sideways. Bail.
 	exit
 end
